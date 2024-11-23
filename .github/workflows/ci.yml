@@ -18,13 +18,13 @@ jobs:
     steps:
       # используем готовый action - вытаскиваем из репо исходники
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       # запускаем собственную команду (make)
       - name: Build app
         run: make
       # используем готовый action - загружаем артефакт
       - name: Upload binary
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         # настраиваем параметры
         with:
           # под каким именем
